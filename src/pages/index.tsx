@@ -1,8 +1,13 @@
+import Scenes from '@components/Scenes';
 import { GetStaticPropsContext } from 'next';
 import { getI18nProps } from '../helpers/i18n';
 
 export default function HomePage() {
-  return <div></div>;
+  return (
+    <>
+      <Scenes />
+    </>
+  );
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
