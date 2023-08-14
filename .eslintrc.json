@@ -1,0 +1,7 @@
+{
+  "extends": "next/core-web-vitals",
+  "ignorePatterns": [
+    "src/pages/exhibition/**/*",
+    "src/components/ExhibitionElements/**/*"
+  ]
+}

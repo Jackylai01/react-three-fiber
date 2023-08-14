@@ -1,0 +1,39 @@
+image: node:16.13.0
+
+stages:
+  - deploy
+  - done
+
+deploy_job:
+  stage: deploy
+  only:
+    - prod
+    - stage
+  script:
+    - mkdir ~/.aws/
+    - touch ~/.aws/
+    - printf "[default]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
+    - npm install serverless@2.70.0 -g
+    - npm install
+    - npm run build
+    - serverless
+
+success:
+  stage: done
+  only:
+    - prod
+    - stage
+  when: on_success
+  script:
+    - npm i @slack/web-api@6.7.2
+    - node ci.on_success
+
+failure:
+  stage: done
+  only:
+    - prod
+    - stage
+  when: on_failure
+  script:
+    - npm i @slack/web-api@6.7.2
+    - node ci.on_failure

@@ -1,0 +1,38 @@
+@use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+// // // 基本設置
+@import 'base/reset';
+@import 'base/icon-fonts';
+
+// // // 變數設定
+@import 'variable/color';
+@import 'variable/layout';
+
+// // // 混合(Mixin)樣式設置
+@import 'mixin/RWD';
+@import 'mixin/block';
+@import 'mixin/shape';
+@import 'mixin/transition';
+@import 'mixin/element';
+@import 'mixin/layout-space';
+@import 'mixin/icon';
+
+// // // 佔用區塊(Placeholder)樣式設置
+@import 'placeholder/flex-element';
+@import 'placeholder/layout-element';
+@import 'placeholder/pseudo-element';
+@import 'placeholder/shape';
+@import 'placeholder/form';
+@import 'placeholder/effect-element';
+
+// // // 結構(Layout)配置撰寫
+@import 'layout/navbar';
+
+// // // 格線(Grid)配置撰寫
+@import 'grid/grid';
+
+// // // 元素(Elements)樣式撰寫
+@import 'elements/btn';
+
+// // // 恥辱
+@import 'shame';

@@ -1,0 +1,196 @@
+.navbar {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 3;
+  background-color: $color_white;
+  box-shadow: $box-shadow_element;
+
+  &__container {
+    align-items: center;
+    margin: 0.5rem 1.75rem;
+    @extend %flex-row-between;
+  }
+
+  &__logo {
+    min-width: 120px;
+    cursor: pointer;
+  }
+
+  &__right-container {
+    gap: 1rem;
+    @extend %flex-center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-size: 1rem;
+
+    @include pad-under-width() {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $background_light;
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 1rem;
+
+    @extend %flex-center;
+
+    &--community {
+      padding: 0rem 0.2rem;
+    }
+
+    @include pad-under-width() {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+  }
+
+  // 相關連結
+  &__item-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: $color_white;
+    box-shadow: $box-shadow_dropdown;
+    z-index: 1;
+    border-radius: $border-radius_layout;
+    li {
+      display: flex;
+      white-space: nowrap;
+      padding: 1rem;
+
+      :hover {
+        color: $color_security;
+      }
+      > a {
+        color: inherit;
+        font-weight: 500;
+      }
+      @include pad-under-width() {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &.open {
+      display: inline-block;
+    }
+
+    @include pad-under-width() {
+      white-space: nowrap;
+      z-index: 3;
+    }
+    @include phone-width() {
+      font-size: 0.65rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color_line-light;
+    font-weight: 600;
+    font-size: 1.17rem;
+    letter-spacing: 1.5px;
+    @include phone-width() {
+      font-size: 0.85rem;
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    @include pad-under-width() {
+      display: flex;
+      justify-content: center;
+    }
+    @include phone-width() {
+      font-size: 0.7rem;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    font-weight: 600;
+    font-size: 1.2rem;
+    &:hover .navbar__dropdown {
+      display: block;
+    }
+    @include phone-width() {
+      font-size: 0.85rem;
+    }
+  }
+  // 多國語系
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    box-shadow: $box-shadow_dropdown;
+    margin-top: 0.2rem;
+    background-color: $color_white;
+    border-radius: 8px;
+    @include phone-width() {
+      overflow-y: scroll;
+    }
+    &-item {
+      padding: 0.85rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $color_black;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: $color_gray;
+        color: $color_white;
+        cursor: pointer;
+      }
+      @include phone-width() {
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  &-active {
+    cursor: pointer;
+    .navbar__list {
+      clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+      transition: all 0.3s ease;
+      overflow-y: scroll;
+    }
+
+    .navbar__menu-btn {
+      &--active {
+        color: $color_line-light;
+        background-color: $color_line-light;
+      }
+    }
+  }
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 35px;
+}

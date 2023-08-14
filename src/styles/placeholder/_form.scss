@@ -1,0 +1,9 @@
+%input-block_base {
+  padding: $padding_small $margin_base;
+  padding: $padding_small $padding_base;
+  outline: none;
+  border: $color_text-color-light solid 1px;
+  border-radius: $radius-size_big;
+  background-color: $color_white;
+  letter-spacing: 2px;
+}

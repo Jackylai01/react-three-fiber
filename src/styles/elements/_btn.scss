@@ -1,0 +1,36 @@
+.access-key {
+  position: relative;
+
+  @include pad-under-width() {
+    display: none;
+  }
+
+  > a {
+    position: absolute;
+    top: 0;
+    left: calc(10% - 40px);
+    color: $color_black;
+  }
+
+  &__go-to-main {
+    position: absolute;
+    top: $margin_small;
+    left: $margin_small;
+    z-index: $z-index_base;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    border-radius: $border-radius_layout;
+
+    @include pad-under-width() {
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      padding: $padding_small;
+      width: auto;
+      height: auto;
+    }
+  }
+}

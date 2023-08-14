@@ -1,0 +1,19 @@
+%tabs-effect_dark-bg {
+  cursor: pointer;
+  @include hoverActiveColorBackgroundTransition(
+    $color_white,
+    transparent,
+    $color_white,
+    $color_text-color
+  );
+}
+
+%tabs-effect_white-bg {
+  cursor: pointer;
+  @include hoverActiveColorBackgroundTransition(
+    $color_accent,
+    transparent,
+    $color_white,
+    $color_accent
+  );
+}

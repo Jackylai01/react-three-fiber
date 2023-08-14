@@ -1,0 +1,7 @@
+@mixin backgroundTag(
+  $color: $color_text-color,
+  $background: lighten($color, 28)
+) {
+  color: darken($color, 20);
+  background-color: $background;
+}

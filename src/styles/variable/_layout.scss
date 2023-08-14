@@ -1,0 +1,49 @@
+$max-width_container: 1200px;
+
+$width_container--big: 85%;
+$width_container: 80%;
+$width_container--small: 70%;
+
+$width_login-aside: 460px;
+$width_main-aside: 260px;
+
+$height_header: 80px;
+$height_manager-footer: 50px;
+$height_manager-actions: 70px;
+
+$padding_big: 50px;
+$padding_base: 30px;
+$padding_small: 15px;
+
+$margin_big: 40px;
+$margin_base: 20px;
+$margin_small: 10px;
+
+$layout-size_big: 60px;
+$layout-size_base: 30px;
+$layout-size_small: 10px;
+
+$radius-size_base: 6px;
+$radius-size_big: 20px;
+$radius-size_over: 100px;
+
+$row-size_col-margin-big: 25px;
+$row-size_col-margin: 15px;
+$row-size_col-margin-small: 9px;
+
+$z-index_back: -1;
+$z-index_base: 10;
+$z-index_front: 100;
+$z-index_cover: 1000;
+
+$border-radius_layout: 12px;
+
+// 30px 50px
+$block-padding_big: $padding_base $padding_big;
+// 15px 30px
+$block-padding_base: $padding_small $padding_base;
+// 15px
+$block-padding_small: $padding_small;
+
+// 15px 20px
+$element-padding_base: $padding_small $margin_base;
