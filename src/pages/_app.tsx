@@ -6,7 +6,7 @@ import Head from 'next/head';
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
-      <title>艾諾比數位股份有限公司官網</title>
+      <title>Three.js 測試</title>
     </Head>
 
     <Component {...pageProps} />

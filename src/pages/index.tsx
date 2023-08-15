@@ -1,11 +1,11 @@
-import Scenes from '@components/Scenes';
+import Test from '@components/Test/Test';
 import { GetStaticPropsContext } from 'next';
 import { getI18nProps } from '../helpers/i18n';
 
 export default function HomePage() {
   return (
     <>
-      <Scenes />
+      <Test />
     </>
   );
 }
